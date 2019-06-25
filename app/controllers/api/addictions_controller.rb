@@ -12,7 +12,7 @@ class Api::AddictionsController < ApplicationController
 
 
   def create
-    addiction = Addiction.new(
+    @addiction = Addiction.new(
       title: params[:title],
       problem: params[:problem],
       solution: params[:solution],
@@ -20,8 +20,8 @@ class Api::AddictionsController < ApplicationController
       twelve_steps: params[:twelve_steps],
       recovery_url: params[:recovery_url]
       ) 
-    if addiction.save 
-      render json: {message: "Addiction created succesfully"},
+    if @addiction.save 
+      render 'show.json.jbuilder',
       status: :created 
     else 
       render json: {errors: addiction.errors.full_messages}, status: :bad_request

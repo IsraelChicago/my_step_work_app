@@ -16,7 +16,7 @@ class Api::FourthStepsController < ApplicationController
 
 
   def create
-    fourth_step = FourthStep.new(
+    @fourth_step = FourthStep.new(
       type_of_fourth: params[:type_of_fourth],
       who: params[:who],
       what: params[:what],
@@ -43,8 +43,8 @@ class Api::FourthStepsController < ApplicationController
       free: params[:free],
       user_id: params[:user_id]
       ) 
-    if fourth_step.save 
-      render json: {message: "Fourth step created succesfully"},
+    if @fourth_step.save 
+      render 'show.json.jbuilder',
       status: :created 
     else 
       render json: {errors: fourth_step.errors.full_messages}, status: :bad_request
@@ -55,31 +55,32 @@ class Api::FourthStepsController < ApplicationController
 
   def update
     @fourth_step = FourthStep.find(params[:id])
-    @fourth_step.type_of_fourth = params[:type_of_fourth]
-    @fourth_step.who = params[:who]
-    @fourth_step.what = params[:what]
-    @fourth_step.why = params[:why]
-    @fourth_step.self_esteem = params[:self_esteem]
-    @fourth_step.pocket_book = params[:pocket_book]
-    @fourth_step.ambitions = params[:ambitions]
-    @fourth_step.personal_relationships = params[:personal_relationships]
-    @fourth_step.physical_security = params[:physical_security]
-    @fourth_step.emotional_security = params[:emotional_security]
-    @fourth_step.sex_relationships = params[:sex_relationships]
-    @fourth_step.fear_solved = params[:fear_solved]
-    @fourth_step.selfish = params[:selfish]
-    @fourth_step.dishonest = params[:dishonest]
-    @fourth_step.self_seeking = params[:self_seeking]
-    @fourth_step.frightened = params[:frightened]
-    @fourth_step.selfless = params[:selfless]
-    @fourth_step.rigorous_honesty = params[:rigorous_honesty]
-    @fourth_step.hp_seeking = params[:hp_seeking]
-    @fourth_step.hp_serenity = params[:hp_serenity]
-    @fourth_step.fifth_done = params[:fifth_done]
-    @fourth_step.eight_done = params[:eight_done]
-    @fourth_step.ninth_done = params[:ninth_done]
-    @fourth_step.free = params[:free]
-    @fourth_step.user_id = params[:user_id]
+
+    @fourth_step.type_of_fourth = params[:type_of_fourth] || @fourth_step.type_of_fourth
+    @fourth_step.who = params[:who]|| @fourth_step.who
+    @fourth_step.what = params[:what]|| @fourth_step.what
+    @fourth_step.why = params[:why]|| @fourth_step.why
+    @fourth_step.self_esteem = params[:self_esteem]|| @fourth_step.self_esteem
+    @fourth_step.pocket_book = params[:pocket_book]|| @fourth_step.pocket_book
+    @fourth_step.ambitions = params[:ambitions]|| @fourth_step.ambitions
+    @fourth_step.personal_relationships = params[:personal_relationships]|| @fourth_step.personal_relationships
+    @fourth_step.physical_security = params[:physical_security]|| @fourth_step.physical_security
+    @fourth_step.emotional_security = params[:emotional_security]|| @fourth_step.emotional_security
+    @fourth_step.sex_relationships = params[:sex_relationships]|| @fourth_step.sex_relationships
+    @fourth_step.fear_solved = params[:fear_solved]|| @fourth_step.fear_solved
+    @fourth_step.selfish = params[:selfish]|| @fourth_step.selfish
+    @fourth_step.dishonest = params[:dishonest]|| @fourth_step.dishonest
+    @fourth_step.self_seeking = params[:self_seeking]|| @fourth_step.self_seeking
+    @fourth_step.frightened = params[:frightened]|| @fourth_step.frightened
+    @fourth_step.selfless = params[:selfless]|| @fourth_step.selfless
+    @fourth_step.rigorous_honesty = params[:rigorous_honesty]|| @fourth_step.rigorous_honesty
+    @fourth_step.hp_seeking = params[:hp_seeking]|| @fourth_step.hp_seeking
+    @fourth_step.hp_serenity = params[:hp_serenity]|| @fourth_step.hp_seeking
+    @fourth_step.fifth_done = params[:fifth_done]|| @fourth_step.fifth_done
+    @fourth_step.eight_done = params[:eight_done]|| @fourth_step.eight_done
+    @fourth_step.ninth_done = params[:ninth_done]|| @fourth_step.ninth_done
+    @fourth_step.free = params[:free]|| @fourth_step.free
+    @fourth_step.user_id = params[:user_id]|| @fourth_step.user_id
 
     if @fourth_step.save 
       render 'show.json.jbuilder'

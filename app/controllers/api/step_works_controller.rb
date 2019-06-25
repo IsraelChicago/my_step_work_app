@@ -17,14 +17,14 @@ class Api::StepWorksController < ApplicationController
 
 
   def create
-    step_work = StepWork.new(
+    @step_work = StepWork.new(
       step: params[:step],
       journal: params[:journal],
       my_work: params[:my_work],
       user_id: params[:user_id],
       ) 
-    if step_work.save 
-      render json: {message: "Step Work created succesfully"},
+    if @step_work.save 
+      render 'show.json.jbuilder',
       status: :created 
     else 
       render json: {errors: step_work.errors.full_messages}, status: :bad_request
@@ -37,10 +37,10 @@ class Api::StepWorksController < ApplicationController
 
   def update
     @step_work = StepWork.find(params[:id])
-    @step_work.step = params[:step]
-    @step_work.my_work = params[:my_work]
-    @step_work.journal = params[:journal]
-    @step_work.user_id = params[:user_id]
+    @step_work.step = params[:step] || @step_work.step
+    @step_work.my_work = params[:my_work] || @step_work.my_work
+    @step_work.journal = params[:journal]|| @step_work.journal
+   
 
     if @step_work.save 
       render 'show.json.jbuilder'
