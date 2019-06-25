@@ -1,0 +1,1 @@
+json.partial! "step_works.json.jbuilder", step_work: @step_work

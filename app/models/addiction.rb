@@ -1,0 +1,2 @@
+class Addiction < ApplicationRecord
+end

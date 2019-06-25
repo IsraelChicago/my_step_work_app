@@ -1,0 +1,1 @@
+json.partial! "fourth_steps.json.jbuilder", fourth_step: @fourth_step

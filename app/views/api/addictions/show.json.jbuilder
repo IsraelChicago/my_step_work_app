@@ -1,0 +1,1 @@
+json.partial! "addiction.json.jbuilder", addiction: @addiction
