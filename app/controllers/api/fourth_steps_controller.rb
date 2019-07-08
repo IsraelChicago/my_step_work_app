@@ -1,22 +1,27 @@
 class Api::FourthStepsController < ApplicationController
 
+  before_action :authenticate_user
 
-  def index # current_user
-    @fourth_steps = FourthStep.all 
-    render "index.json.jbuilder"
-  
+
+  def index
+    @fourth_steps = current_user.fourth_steps
+    render 'index.json.jbuilder'
   end
 
 
-  def show # current_user
-    fourth_step_id = params[:id]
-    @fourth_step = FourthStep.find_by(id: fourth_step_id)
+  
+
+
+  def show 
+    @fourth_steps = current_user.fourth_steps
+    @fourth_step = @fourth_steps.find(params[:id]) 
     render 'show.json.jbuilder' 
   end
 
 
   def create
-    @fourth_step = FourthStep.new(
+    @fourth_steps = current_user.fourth_steps
+    @fourth_step = @fourth_steps.new(
       type_of_fourth: params[:type_of_fourth],
       who: params[:who],
       what: params[:what],
@@ -41,20 +46,21 @@ class Api::FourthStepsController < ApplicationController
       eight_done: params[:eight_done],
       ninth_done: params[:ninth_done],
       free: params[:free],
-      user_id: params[:user_id]
+      user_id: current_user.id
       ) 
     if @fourth_step.save 
       render 'show.json.jbuilder',
       status: :created 
     else 
-      render json: {errors: fourth_step.errors.full_messages}, status: :bad_request
+      render json: {errors: @fourth_step.errors.full_messages}, status: :bad_request
     end
 
   end
 
 
   def update
-    @fourth_step = FourthStep.find(params[:id])
+    @fourth_steps = current_user.fourth_steps
+    @fourth_step = @fourth_steps.find(params[:id])
 
     @fourth_step.type_of_fourth = params[:type_of_fourth] || @fourth_step.type_of_fourth
     @fourth_step.who = params[:who]|| @fourth_step.who
@@ -80,7 +86,7 @@ class Api::FourthStepsController < ApplicationController
     @fourth_step.eight_done = params[:eight_done]|| @fourth_step.eight_done
     @fourth_step.ninth_done = params[:ninth_done]|| @fourth_step.ninth_done
     @fourth_step.free = params[:free]|| @fourth_step.free
-    @fourth_step.user_id = params[:user_id]|| @fourth_step.user_id
+    @fourth_step.user_id = current_user.id 
 
     if @fourth_step.save 
       render 'show.json.jbuilder'
@@ -92,10 +98,15 @@ class Api::FourthStepsController < ApplicationController
 
 
   def destroy
-    @fourth_step = FourthStep.find(params[:id])
-    @fourth_step.destroy
-    render json: {message: "Fourth step Succesfully destroyed"}
+    @fourth_steps = current_user.fourth_steps
+
+    if @fourth_step = @fourth_steps.find(params[:id])
+      @fourth_step.destroy
+      render 'index.json.jbuilder'
     # front end back to sign up 
+    else 
+      render json: {errors: @fourth_steps.errors.full_messages}, status: :bad_request
+    end
   end
 
 

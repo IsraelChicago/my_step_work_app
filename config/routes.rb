@@ -10,11 +10,13 @@ Rails.application.routes.draw do
     delete "/users/:id" => "users#destroy"
 
 
+    post "/sessions" => "sessions#create"
 
-    # get "/addictions/" => "addictions#index"
-    get "/addictions/:id" => "addictions#show"
+
+    get "/addictions/" => "addiction_displays#index"
+    get "/addictions/:id" => "addiction_displays#show"
     post "/addictions/" => "addictions#create"
-    # # patch "/addictions/:id" => "addictions#update"
+    patch "/addictions/:id" => "addictions#update"
     # #(Admin only) 
     # # delete "/addictions/:id" => "addictions#destroy"
 

@@ -1,8 +1,8 @@
 class Api::UsersController < ApplicationController
   
   def show
-    user_id = params[:id]
-    @user = User.find_by(id: user_id)
+    
+    @user = current_user
     render 'show.json.jbuilder'
      
   end
@@ -16,12 +16,13 @@ class Api::UsersController < ApplicationController
       user_name: params[:user_name],
       email: params[:email],
       password: params[:password],
-      ) 
+      password_confirmation: params[:password_confirmation]
+       ) 
     if @user.save 
       render 'show.json.jbuilder',
       status: :created 
     else 
-      render json: {errors: user.errors.full_messages}, status: :bad_request
+      render json: {errors: @user.errors.full_messages}, status: :bad_request
     end
 
   end
@@ -30,11 +31,12 @@ class Api::UsersController < ApplicationController
 
 
   def update
-    @user = User.find(params[:id])
-    @user.name = params[:name]
-    @user.user_name = params[:user_name]
-    @user.email = params[:email]
-    @user.password = params[:password]
+    
+    @user = current_user
+    @user.name = params[:name] || @user.name
+    @user.user_name = params[:user_name] || @user.user_name
+    @user.email = params[:email] || @user.email
+    @user.password = params[:password] || @user.password_digest
 
     if @user.save 
       render 'show.json.jbuilder'
@@ -46,7 +48,7 @@ class Api::UsersController < ApplicationController
   
 
   def destroy
-    @user = User.find(params[:id])
+    @user = current_user
     @user.destroy
     render json: {message: "User Succesfully destroyed"}
     # front end back to sign up 

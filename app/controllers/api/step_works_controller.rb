@@ -1,23 +1,25 @@
 class Api::StepWorksController < ApplicationController
 
+  before_action :authenticate_user
+
   
-  def index # current_user
-    @step_works = StepWork.all 
-    render "index.json.jbuilder"
-    
+  def index 
+    @step_works = current_user.step_works 
+    render "index.json.jbuilder"   
   end
 
 
   def show # current_user
-    step_work_id = params[:id]
-    @step_work = StepWork.find_by(id: step_work_id)
+    @step_works = current_user.step_works
+    @step_work = @step_works.find(params[:id]) 
     render 'show.json.jbuilder'
      
   end
 
 
   def create
-    @step_work = StepWork.new(
+    @step_works = current_user.step_works
+    @step_work = @step_works.new(
       step: params[:step],
       journal: params[:journal],
       my_work: params[:my_work],
@@ -36,11 +38,11 @@ class Api::StepWorksController < ApplicationController
 
 
   def update
-    @step_work = StepWork.find(params[:id])
+    @step_works = current_user.step_works
+    @step_work = @step_works.find(params[:id])
     @step_work.step = params[:step] || @step_work.step
     @step_work.my_work = params[:my_work] || @step_work.my_work
     @step_work.journal = params[:journal]|| @step_work.journal
-   
 
     if @step_work.save 
       render 'show.json.jbuilder'
@@ -52,10 +54,11 @@ class Api::StepWorksController < ApplicationController
   
 
   def destroy
-    @step_work = StepWork.find(params[:id])
+    @step_works = current_user.step_works
+
+    @step_work = @step_works.find(params[:id])
     @step_work.destroy
-    render json: {message: "step_work Succesfully destroyed"}
-    # front end back to sign up 
+    render 'index.json.jbuilder'  
   end
 
 

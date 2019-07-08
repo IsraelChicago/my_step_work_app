@@ -2,6 +2,10 @@ json.id addiction.id
 json.title addiction.title
 json.problem addiction.problem
 json.solution addiction.solution
-json.hope addiction.hope
+json.promises addiction.promises
 json.twelve_steps addiction.twelve_steps
 json.recovery_url addiction.recovery_url 
+json.logo_url addiction.logo_url
+json.background_url addiction.background_url 
+json.switch_background_url addiction.switch_background_url 
+

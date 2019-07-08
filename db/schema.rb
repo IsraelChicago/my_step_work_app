@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_25_180313) do
+ActiveRecord::Schema.define(version: 2019_07_07_130620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,11 +19,15 @@ ActiveRecord::Schema.define(version: 2019_06_25_180313) do
     t.string "title"
     t.text "problem"
     t.text "solution"
-    t.text "hope"
+    t.text "promises"
     t.text "twelve_steps"
     t.string "recovery_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "logo_url"
+    t.string "background_url"
+    t.string "switch_background_url"
+    t.integer "user_id"
   end
 
   create_table "fourth_steps", force: :cascade do |t|
