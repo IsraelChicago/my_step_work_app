@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_07_130620) do
+ActiveRecord::Schema.define(version: 2019_07_09_112434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_07_07_130620) do
     t.string "background_url"
     t.string "switch_background_url"
     t.integer "user_id"
+    t.string "addiction_family"
   end
 
   create_table "fourth_steps", force: :cascade do |t|

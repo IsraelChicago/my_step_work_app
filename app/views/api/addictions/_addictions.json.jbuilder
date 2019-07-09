@@ -1,5 +1,6 @@
 json.id addiction.id
 json.title addiction.title
+json.addiction_family addiction.addiction_family
 json.problem addiction.problem
 json.solution addiction.solution
 json.promises addiction.promises
