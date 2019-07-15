@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_112434) do
+ActiveRecord::Schema.define(version: 2019_07_12_180818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2019_07_09_112434) do
   end
 
   create_table "fourth_steps", force: :cascade do |t|
-    t.string "type_of_fourth"
     t.string "who"
     t.text "what"
     t.text "why"
@@ -59,6 +58,19 @@ ActiveRecord::Schema.define(version: 2019_07_09_112434) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "harm"
+    t.boolean "resentment"
+    t.boolean "fear"
+    t.boolean "type_done"
+    t.boolean "three_columns_done"
+    t.boolean "fourth_column_done"
+    t.boolean "fifth_column_done"
+    t.boolean "additional_done"
+    t.boolean "tenth_step"
+    t.integer "count_resentments"
+    t.integer "count_harms"
+    t.integer "count_fears"
+    t.integer "count_tenths"
   end
 
   create_table "step_works", force: :cascade do |t|

@@ -4,7 +4,8 @@ class Api::StepWorksController < ApplicationController
 
   
   def index 
-    @step_works = current_user.step_works 
+    @step_works = current_user.step_works.order(:step)
+
     render "index.json.jbuilder"   
   end
 

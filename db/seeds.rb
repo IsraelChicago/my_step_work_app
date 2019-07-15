@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.new(name: "Israel", user_name: "Israel613", email: "israel613@gmail.com", password_digest: "hass6442")
+user = User.new(name: "Yankele Hass", user_name: "Yankele", email: "rabbi.yi.hass@gmail.com", password_digest: "YH.60645")
 user.save
 
 
@@ -14,7 +14,7 @@ user.save
 step_work = StepWork.new(step: 1, journal: "I admit powerlessness", my_work: "Sponsor told me to prepare a written step work", user_id: 1)
 step_work.save
 
-step_work = StepWork.new(step: 2, journal: "I am coming to believe", my_work: "Sponsor told me to prepare a written step work", user_id: 2)
+step_work = StepWork.new(step: 2, journal: "I am coming to believe", my_work: "Sponsor told me to prepare a written step work", user_id: 1)
 step_work.save
 
 

@@ -12,16 +12,16 @@ Rails.application.routes.draw do
 
     post "/sessions" => "sessions#create"
 
-    get "/addiction_displays/" => "addiction_displays#index"
-    get "/addiction_displays/:id" => "addiction_displays#show"
+    get "/addictions/" => "addiction_displays#index"
+    get "/addictions/:id" => "addiction_displays#show"
 
 
-    get "/addictions/" => "addictions#index"
-    get "/addictions/:id" => "addictions#show"
-    post "/addictions/" => "addictions#create"
-    patch "/addictions/:id" => "addictions#update"
+    get "/addictions_admin/" => "addictions#index"
+    get "/addictions_admin/:id" => "addictions#show"
+    post "/addictions_admin/" => "addictions#create"
+    patch "/addictions_admin/:id" => "addictions#update"
     # #(Admin only) 
-    delete "/addictions/:id" => "addictions#destroy"
+    delete "/addictions_admin/:id" => "addictions#destroy"
 
 
 

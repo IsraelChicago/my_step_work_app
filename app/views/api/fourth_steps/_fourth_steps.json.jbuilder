@@ -1,5 +1,7 @@
 json.id fourth_step.id 
-json.type_of_fourth fourth_step.type_of_fourth
+json.resentment fourth_step.resentment
+json.harm fourth_step.harm
+json.fear fourth_step.fear
 json.who fourth_step.who
 json.what fourth_step.what
 json.why fourth_step.why

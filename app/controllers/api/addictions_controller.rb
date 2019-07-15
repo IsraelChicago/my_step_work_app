@@ -2,6 +2,11 @@ class Api::AddictionsController < ApplicationController
 
   before_action :authenticate_user
 
+  def index
+    @addictions = current_user.addictions
+    render 'index.json.jbuilder'
+  end
+
   def show # current_user
     @addictions = current_user.addictions
     @addiction = @addictions.find(params[:id]) 
