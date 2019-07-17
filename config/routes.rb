@@ -12,14 +12,12 @@ Rails.application.routes.draw do
 
     post "/sessions" => "sessions#create"
 
-    get "/addictions/" => "addiction_displays#index"
-    get "/addictions/:id" => "addiction_displays#show"
+    
 
-
-    get "/addictions_admin/" => "addictions#index"
-    get "/addictions_admin/:id" => "addictions#show"
-    post "/addictions_admin/" => "addictions#create"
-    patch "/addictions_admin/:id" => "addictions#update"
+    get "/addictions/" => "addictions#index"
+    get "/addictions/:id" => "addictions#show"
+    post "/addictions/" => "addictions#create"
+    patch "/addictions/:id" => "addictions#update"
     # #(Admin only) 
     delete "/addictions_admin/:id" => "addictions#destroy"
 

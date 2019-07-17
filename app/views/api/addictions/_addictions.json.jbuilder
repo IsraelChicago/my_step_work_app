@@ -4,6 +4,7 @@ json.addiction_family addiction.addiction_family
 json.problem addiction.problem
 json.solution addiction.solution
 json.promises addiction.promises
+json.promises addiction.promises
 json.twelve_steps addiction.twelve_steps
 json.recovery_url addiction.recovery_url 
 json.logo_url addiction.logo_url

@@ -1,18 +1,21 @@
 class Api::AddictionsController < ApplicationController
 
-  before_action :authenticate_user
+  
 
-  def index
-    @addictions = current_user.addictions
-    render 'index.json.jbuilder'
+  def index 
+    @addictions = Addiction.all.order(:addiction_family) 
+    render "index.json.jbuilder"   
   end
+  
 
-  def show # current_user
-    @addictions = current_user.addictions
-    @addiction = @addictions.find(params[:id]) 
+  def show
+    addiction_id = params[:id]
+    @addiction = Addiction.find_by(id: addiction_id)
     render 'show.json.jbuilder'
      
   end
+
+
 
   def create
     @addictions = current_user.addictions
@@ -27,7 +30,7 @@ class Api::AddictionsController < ApplicationController
       logo_url: params[:logo_url],
       background_url: params[:background_url],
       switch_background_url: params[:switch_background_url],
-      user_id: current_user.id
+      user_id: params[:user_id],
       ) 
     if @addiction.save 
       render 'show.json.jbuilder',
@@ -43,16 +46,16 @@ class Api::AddictionsController < ApplicationController
     @addictions = current_user.addictions
     @addiction = @addictions.find(params[:id])
 
-    @addiction.title = params[:title] || @addiction.title,
-    @addiction.addiction_family = params[:addiction_family] || @addiction.addiction_family,
-    @addiction.problem = params[:problem] || @addiction.problem,
-    @addiction.solution = params[:solution] || @addiction.solution,
-    @addiction.promises = params[:promises] || @addiction.promises,
-    @addiction.twelve_steps = params[:twelve_steps] || @addiction.twelve_steps,
-    @addiction.recovery_url = params[:recovery_url] || @addiction.recovery_url,
-    @addiction.logo_url = params[:logo_url] || @addiction.logo_url,
-    @addiction.background_url = params[:background_url] || @addiction.background_url,
-    @addiction.switch_background_url = params[:switch_background_url] || @addiction.switch_background_url,
+    @addiction.title = params[:title] || @addiction.title
+    @addiction.addiction_family = params[:addiction_family] || @addiction.addiction_family
+    @addiction.problem = params[:problem] || @addiction.problem
+    @addiction.solution = params[:solution] || @addiction.solution
+    @addiction.promises = params[:promises] || @addiction.promises
+    @addiction.twelve_steps = params[:twelve_steps] || @addiction.twelve_steps
+    @addiction.recovery_url = params[:recovery_url] || @addiction.recovery_url
+    @addiction.logo_url = params[:logo_url] || @addiction.logo_url
+    @addiction.background_url = params[:background_url] || @addiction.background_url
+    @addiction.switch_background_url = params[:switch_background_url] || @addiction.switch_background_url
     @addiction.user_id = current_user.id
       
     if @addiction.save 
