@@ -6,73 +6,73 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# user = User.new(name: "Israel Hass", user_name: "Israel", email: "rabbi.yi.hass@gmail.com", password_digest: "YH.40.yo")
-# user.save
+user = User.new(name: "Israel Hass", user_name: "Israel", email: "rabbi.yi.hass@gmail.com", password_digest: "$2a$12$sUqCmtU6a2Vy0DKLH.dkteNr/A1axt0wJFv/vvSPL/6cuwEG0Np/K")
+user.save
 
 
-# addiction = Addiction.new(
-# title: "Adult Children of
-# Alcoholics",
-#   addiction_family:    
-#   "Affected from Addicts",
-#   logo_url:    
-#   "https://adultchildren.org/wp-content/uploads/2018/02/logo-final-1.jpg",
-#   background_url:    
-#   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiumAoWHOCCauXG7wyS1gFIIPDxIgdzZ1ef_bgZM2B_4S1lgOtF8MToyU",
-#   problem:    
-#   "Many of us found that we had several characteristics in common as a result of being brought up in an alcoholic or dysfunctional household. We had come to feel isolated and uneasy with other people, especially authority figures. To protect ourselves, we became people-pleasers, even though we lost our own identities in the process. All the same we would mistake any personal criticism as a threat. We either became alcoholics (or practiced other addictive behavior) ourselves, or married them, or both. Failing that, we found other compulsive personalities, such as a workaholic, to fulfill our sick need for abandonment.
+addiction = Addiction.new(
+title: "Adult Children of
+Alcoholics",
+  addiction_family:    
+  "Affected from Addicts",
+  logo_url:    
+  "https://adultchildren.org/wp-content/uploads/2018/02/logo-final-1.jpg",
+  background_url:    
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiumAoWHOCCauXG7wyS1gFIIPDxIgdzZ1ef_bgZM2B_4S1lgOtF8MToyU",
+  problem:    
+  "Many of us found that we had several characteristics in common as a result of being brought up in an alcoholic or dysfunctional household. We had come to feel isolated and uneasy with other people, especially authority figures. To protect ourselves, we became people-pleasers, even though we lost our own identities in the process. All the same we would mistake any personal criticism as a threat. We either became alcoholics (or practiced other addictive behavior) ourselves, or married them, or both. Failing that, we found other compulsive personalities, such as a workaholic, to fulfill our sick need for abandonment.
 
-# We lived life from the standpoint of victims. Having an overdeveloped sense of responsibility, we preferred to be concerned with others rather than ourselves. We got guilt feelings when we stood up for ourselves rather than giving in to others. Thus, we became reactors, rather than actors, letting others take the initiative. We were dependent personalities, terrified of abandonment, willing to do almost anything to hold on to a relationship in order not to be abandoned emotionally. Yet we kept choosing insecure relationships because they matched our childhood relationship with alcoholic or dysfunctional parents.
+We lived life from the standpoint of victims. Having an overdeveloped sense of responsibility, we preferred to be concerned with others rather than ourselves. We got guilt feelings when we stood up for ourselves rather than giving in to others. Thus, we became reactors, rather than actors, letting others take the initiative. We were dependent personalities, terrified of abandonment, willing to do almost anything to hold on to a relationship in order not to be abandoned emotionally. Yet we kept choosing insecure relationships because they matched our childhood relationship with alcoholic or dysfunctional parents.
 
-# These symptoms of the family disease of alcoholism or other dysfunction made us “co-victims”, those who take on the characteristics of the disease without necessarily ever taking a drink. We learned to keep our feelings down as children and kept them buried as adults. As a result of this conditioning, we confused love with pity, tending to love those we could rescue. Even more self-defeating, we became addicted to excitement in all our affairs, preferring constant upset to workable relationships.
+These symptoms of the family disease of alcoholism or other dysfunction made us “co-victims”, those who take on the characteristics of the disease without necessarily ever taking a drink. We learned to keep our feelings down as children and kept them buried as adults. As a result of this conditioning, we confused love with pity, tending to love those we could rescue. Even more self-defeating, we became addicted to excitement in all our affairs, preferring constant upset to workable relationships.
 
-# This is a description, not an indictment.",
-#   solution:    
-#   "The solution is to become your own loving parent
-# As ACA becomes a safe place for you, you will find freedom to express all the hurts and fears you have kept inside and to free yourself from the shame and blame that are carryovers from the past. You will become an adult who is imprisoned no longer by childhood reactions. You will recover the child within you, learning to accept and love yourself.
+This is a description, not an indictment.",
+  solution:    
+  "The solution is to become your own loving parent
+As ACA becomes a safe place for you, you will find freedom to express all the hurts and fears you have kept inside and to free yourself from the shame and blame that are carryovers from the past. You will become an adult who is imprisoned no longer by childhood reactions. You will recover the child within you, learning to accept and love yourself.
 
-# The healing begins when we risk moving out of isolation. Feelings and buried memories will return. By gradually releasing the burden of unexpressed grief, we slowly move out of the past. We learn to re-parent ourselves with gentleness, humor, love and respect.
+The healing begins when we risk moving out of isolation. Feelings and buried memories will return. By gradually releasing the burden of unexpressed grief, we slowly move out of the past. We learn to re-parent ourselves with gentleness, humor, love and respect.
 
-# This process allows us to see our biological parents as the instruments of our existence. Our actual parent is a Higher Power whom some of us choose to call God. Although we had alcoholic or dysfunctional parents, our Higher Power gave us the Twelve Steps of Recovery.
+This process allows us to see our biological parents as the instruments of our existence. Our actual parent is a Higher Power whom some of us choose to call God. Although we had alcoholic or dysfunctional parents, our Higher Power gave us the Twelve Steps of Recovery.
 
-# This is the action and work that heals us: we use the Steps; we use the meetings; we use the telephone. We share our experience, strength, and hope with each other. We learn to restructure our sick thinking one day at a time. When we release our parents from responsibility for our actions today, we become free to make healthful decisions as actors, not reactors. We progress from hurting, to healing, to helping. We awaken to a sense of wholeness we never knew was possible.
+This is the action and work that heals us: we use the Steps; we use the meetings; we use the telephone. We share our experience, strength, and hope with each other. We learn to restructure our sick thinking one day at a time. When we release our parents from responsibility for our actions today, we become free to make healthful decisions as actors, not reactors. We progress from hurting, to healing, to helping. We awaken to a sense of wholeness we never knew was possible.
 
-# By attending these meetings on a regular basis, you will come to see parental alcoholism or family dysfunction for what it is: a disease that infected you as a child and continues to affect you as an adult. You will learn to keep the focus on yourself in the here and now. You will take responsibility for your own life and supply your own parenting.
+By attending these meetings on a regular basis, you will come to see parental alcoholism or family dysfunction for what it is: a disease that infected you as a child and continues to affect you as an adult. You will learn to keep the focus on yourself in the here and now. You will take responsibility for your own life and supply your own parenting.
 
-# You will not do this alone. Look around you and you will see others who know how you feel. We will love and encourage you no matter what. We ask you to accept us just as we accept you.
+You will not do this alone. Look around you and you will see others who know how you feel. We will love and encourage you no matter what. We ask you to accept us just as we accept you.
 
-# This is a spiritual program based on action coming from love. We are sure that as the love grows inside you, you will see beautiful changes in all your relationships, especially with God, yourself, and your parents.",
-#   promises:    
-#   "1. We will discover our real identities by loving and accepting ourselves.
-# 2. Our self-esteem will increase as we give ourselves approval on a daily basis.
-# 3. Fear of authority figures and the need to “people-please” will leave us.
-# 4. Our ability to share intimacy will grow inside us.
-# 5. As we face our abandonment issues, we will be attracted by strengths and become more tolerant of weaknesses.
-# 6. We will enjoy feeling stable, peaceful, and financially secure.
-# 7. We will learn how to play and have fun in our lives.
-# 8. We will choose to love people who can love and be responsible for themselves.
-# 9. Healthy boundaries and limits will become easier for us to set.
-# 10. Fears of failure and success will leave us, as we intuitively make healthier choices.
-# 11. With help from our ACA support group, we will slowly release our dysfunctional behaviors.
-# 12. Gradually, with our Higher Power’s help, we will learn to expect the best and get it.",
-#   twelve_steps:    
-#   "1. We admitted we were powerless over the effects of alcoholism or other family dysfunction, that our lives had become unmanageable.
-# 2. Came to believe that a power greater than ourselves could restore us to sanity.
-# 3. Made a decision to turn our will and our lives over to the care of God as we understand God.
-# 4. Made a searching and fearless moral inventory of ourselves.
-# 5. Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.
-# 6. Were entirely ready to have God remove all these defects of character.
-# 7. Humbly asked God to remove our shortcomings.
-# 8. Made a list of all persons we had harmed and became willing to make amends to them all.
-# 9. Made direct amends to such people wherever possible, except when to do so would injure them or others.
-# 10. Continued to take personal inventory and, when we were wrong, promptly admitted it.
-# 11. Sought through prayer and meditation to improve our conscious contact with God, as we understand God, praying only for knowledge of God’s will for us and the power to carry that out.
-# 12. Having had a spiritual awakening as a result of these steps, we tried to carry this message to others who still suffer, and to practice these principles in all our affairs.",
-#   recovery_url:    
-#   "https://adultchildren.org",
-#   user_id:    1)
+This is a spiritual program based on action coming from love. We are sure that as the love grows inside you, you will see beautiful changes in all your relationships, especially with God, yourself, and your parents.",
+  promises:    
+  "1. We will discover our real identities by loving and accepting ourselves.
+2. Our self-esteem will increase as we give ourselves approval on a daily basis.
+3. Fear of authority figures and the need to “people-please” will leave us.
+4. Our ability to share intimacy will grow inside us.
+5. As we face our abandonment issues, we will be attracted by strengths and become more tolerant of weaknesses.
+6. We will enjoy feeling stable, peaceful, and financially secure.
+7. We will learn how to play and have fun in our lives.
+8. We will choose to love people who can love and be responsible for themselves.
+9. Healthy boundaries and limits will become easier for us to set.
+10. Fears of failure and success will leave us, as we intuitively make healthier choices.
+11. With help from our ACA support group, we will slowly release our dysfunctional behaviors.
+12. Gradually, with our Higher Power’s help, we will learn to expect the best and get it.",
+  twelve_steps:    
+  "1. We admitted we were powerless over the effects of alcoholism or other family dysfunction, that our lives had become unmanageable.
+2. Came to believe that a power greater than ourselves could restore us to sanity.
+3. Made a decision to turn our will and our lives over to the care of God as we understand God.
+4. Made a searching and fearless moral inventory of ourselves.
+5. Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.
+6. Were entirely ready to have God remove all these defects of character.
+7. Humbly asked God to remove our shortcomings.
+8. Made a list of all persons we had harmed and became willing to make amends to them all.
+9. Made direct amends to such people wherever possible, except when to do so would injure them or others.
+10. Continued to take personal inventory and, when we were wrong, promptly admitted it.
+11. Sought through prayer and meditation to improve our conscious contact with God, as we understand God, praying only for knowledge of God’s will for us and the power to carry that out.
+12. Having had a spiritual awakening as a result of these steps, we tried to carry this message to others who still suffer, and to practice these principles in all our affairs.",
+  recovery_url:    
+  "https://adultchildren.org",
+  user_id:    1)
   
-# addiction.save
+addiction.save
 
 
 
@@ -101,7 +101,7 @@
 
 addiction = Addiction.new(
   title: "Al-Anon Family Groups",
-  addiction_family: "" ,
+  addiction_family: "Affected from Addicts" ,
   logo_url: "https://al-anon.org/wp-content/uploads/AFG_logo_with_slogan1.jpg"  ,
   recovery_url:  "https://al-anon.org/",
   user_id:    1)
@@ -961,54 +961,54 @@ addiction.save
 
   
 
-# step_work = StepWork.new(step: 1, journal: "I admit powerlessness", my_work: "Sponsor told me to prepare a written step work", user_id: 1)
-# step_work.save
+step_work = StepWork.new(step: 1, journal: "I admit powerlessness", my_work: "Sponsor told me to prepare a written step work", user_id: 1)
+step_work.save
 
-# step_work = StepWork.new(step: 2, journal: "I am coming to believe", my_work: "Sponsor told me to prepare a written step work", user_id: 1)
-# step_work.save
+step_work = StepWork.new(step: 2, journal: "I am coming to believe", my_work: "Sponsor told me to prepare a written step work", user_id: 1)
+step_work.save
 
 
 
-# fourth_step = FourthStep.new(
-# harm: :false ,
-# resentment: :true,
-# fear: "",
-# tenth_step: 
-#  "" ,
-# type_done: true ,
-# who: "My Mother in law",
-# what: "She gossiped on me.",
-# why: "",
-# self_esteem: :true, 
-# pocket_book: :true, 
-# ambitions: :true, 
-# personal_relationships: :true, 
-# physical_security: :true, 
-# emotional_security: :true, 
-# sex_relationships: :true, 
-# three_columns_done: :true,  
-# selfish: "I was only thinking how I feel, not at all concedering her story.",
-# dishonest: "I am not 100 percent sure that she was the one gossiping.", 
-# self_seeking: "I want that i should look good in everyones eyes", 
-# frightened: "I am affraid of being looked down at.", 
-# fear_solved: 
-#   "",
+fourth_step = FourthStep.new(
+harm: :false ,
+resentment: :true,
+fear: "",
+tenth_step: 
+ "" ,
+type_done: true ,
+who: "My Mother in law",
+what: "She gossiped on me.",
+why: "",
+self_esteem: :true, 
+pocket_book: :true, 
+ambitions: :true, 
+personal_relationships: :true, 
+physical_security: :true, 
+emotional_security: :true, 
+sex_relationships: :true, 
+three_columns_done: :true,  
+selfish: "I was only thinking how I feel, not at all concedering her story.",
+dishonest: "I am not 100 percent sure that she was the one gossiping.", 
+self_seeking: "I want that i should look good in everyones eyes", 
+frightened: "I am affraid of being looked down at.", 
+fear_solved: 
+  "",
 
-# fourth_column_done: :true  ,  
+fourth_column_done: :true  ,  
 
-# selfless: "I will see what I can do for her and others.", 
-# rigorous_honesty: "Never Judging anyone",
-# hp_seeking: "I will seek validation from my HP only.", 
-# hp_serenity: "When I have God with me all will be just fine.", 
-# fifth_column_done: :true ,
-# fifth_done: :false, 
-# eight_done: :false, 
-# ninth_done: :false, 
-# additional_done: :false ,
-# free: :false, 
-# user_id: 1)
+selfless: "I will see what I can do for her and others.", 
+rigorous_honesty: "Never Judging anyone",
+hp_seeking: "I will seek validation from my HP only.", 
+hp_serenity: "When I have God with me all will be just fine.", 
+fifth_column_done: :true ,
+fifth_done: :false, 
+eight_done: :false, 
+ninth_done: :false, 
+additional_done: :false ,
+free: :false, 
+user_id: 1)
 
-# fourth_step.save
+fourth_step.save
 
 
 
