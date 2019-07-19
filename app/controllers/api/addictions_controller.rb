@@ -3,7 +3,7 @@ class Api::AddictionsController < ApplicationController
   
 
   def index 
-    @addictions = Addiction.all.order(:addiction_family) 
+    @addictions = Addiction.all.order(:title) 
     render "index.json.jbuilder"   
   end
   

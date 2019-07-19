@@ -1,6 +1,15 @@
 json.id addiction.id
 json.title addiction.title
 json.addiction_family addiction.addiction_family
+json.affected_from_addicts addiction.affected_from_addicts
+json.food addiction.food
+json.financials addiction.financials
+json.sex addiction.sex
+json.drug_of_choice addiction.drug_of_choice
+json.gaming_and_internet addiction.gaming_and_internet
+json.self_growth addiction.self_growth
+json.all_types_welcome addiction.all_types_welcome
+json.alcohol addiction.alcohol
 json.problem addiction.problem
 json.solution addiction.solution
 json.promises addiction.promises
